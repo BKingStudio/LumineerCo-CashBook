@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    min-height: calc(100vh - 56px);
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.auth-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.app-section {
+    display: none;
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+}
+
+#invoicePrintContent {
+    background: white;
+    padding: 20px;
+}
+
+.invoice-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.invoice-items {
+    margin: 20px 0;
+}
+
+.invoice-items th {
+    background-color: #f8f9fa;
+}
+
+.invoice-total {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #invoicePrintContent, #invoicePrintContent * {
+        visibility: visible;
+    }
+    #invoicePrintContent {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .no-print {
+        display: none !important;
+    }
+}
